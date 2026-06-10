@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Text Complaint Input Screen - नैत्रम्</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;700&amp;family=Public+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3b82f6", 
+                        "background-light": "#eff6ff",
+                        "background-dark": "#0f172a",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1e293b",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "Noto Sans Devanagari", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased min-h-screen flex flex-col text-slate-900 dark:text-white transition-colors duration-200">
+<header class="flex items-center justify-between border-b border-solid border-blue-100 dark:border-white/10 px-6 py-4 lg:px-10 bg-surface-light dark:bg-surface-dark transition-colors duration-200 sticky top-0 z-50">
+<div class="flex items-center gap-4">
+<div class="flex items-center justify-center">
+<svg class="w-12 h-12 md:w-14 md:h-14" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 24C4 12.9543 12.9543 4 24 4C35.0457 4 44 12.9543 44 24" stroke="#FF9933" stroke-linecap="round" stroke-width="4"></path>
+<path d="M44 24C44 35.0457 35.0457 44 24 44C12.9543 44 4 35.0457 4 24" stroke="#138808" stroke-linecap="round" stroke-width="4"></path>
+<circle cx="24" cy="24" r="10" stroke="#000080" stroke-width="2"></circle>
+<circle cx="24" cy="24" fill="#000080" r="1.5"></circle>
+<g opacity="0.9" stroke="#000080" stroke-width="1">
+<line x1="24" x2="24" y1="14" y2="34"></line>
+<line x1="14" x2="34" y1="24" y2="24"></line>
+<line x1="17" x2="31" y1="17" y2="31"></line>
+<line x1="31" x2="17" y1="17" y2="31"></line>
+<line transform="rotate(22.5 24 24)" x1="24" x2="24" y1="14" y2="34"></line>
+<line transform="rotate(22.5 24 24)" x1="14" x2="34" y1="24" y2="24"></line>
+<line transform="rotate(22.5 24 24)" x1="17" x2="31" y1="17" y2="31"></line>
+<line transform="rotate(22.5 24 24)" x1="31" x2="17" y1="17" y2="31"></line>
+</g>
+</svg>
+</div>
+<div class="flex flex-col">
+<div class="flex items-baseline gap-2">
+<h1 class="text-2xl lg:text-3xl font-extrabold leading-none tracking-tight text-slate-900 dark:text-white">नैत्रम्</h1>
+<span class="text-[10px] font-bold text-slate-500 dark:text-slate-400 tracking-widest uppercase">Govt. of India Initiative</span>
+</div>
+<p class="text-xs font-semibold text-primary tracking-[0.2em] uppercase">Voice of India</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center gap-2 overflow-hidden rounded-lg h-10 px-4 bg-primary/10 text-slate-900 dark:text-white text-sm font-bold hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">
+<span class="material-symbols-outlined" style="font-size: 20px;">translate</span>
+<span class="truncate">English / हिंदी</span>
+<span class="material-symbols-outlined" style="font-size: 20px;">arrow_drop_down</span>
+</button>
+</div>
+</header>
+<main class="flex-1 flex flex-col items-center py-10 px-4 max-w-4xl mx-auto w-full">
+<div class="text-center mb-10">
+<h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white mb-3">Type your grievance</h2>
+<p class="text-slate-600 dark:text-slate-400 text-lg">Please describe the problem in detail. You can type in any Indian language.</p>
+</div>
+<form action="{{ url_for('process_text') }}" method="POST" class="w-full">
+        
+        <div class="w-full relative bg-surface-light dark:bg-surface-dark rounded-2xl shadow-xl shadow-blue-500/5 border border-blue-100 dark:border-slate-700 p-1">
+            <div class="relative">
+                <textarea 
+                    name="complaint_text"
+                    class="w-full h-80 p-6 pr-16 bg-transparent border-none focus:ring-0 text-lg resize-none placeholder-slate-400 dark:placeholder-slate-500 text-slate-800 dark:text-slate-100" 
+                    placeholder="Enter your grievance here..."
+                    required
+                ></textarea>
+                
+                <button type="button" class="absolute top-6 right-6 p-3 rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition-all flex items-center justify-center group" title="Use Voice-to-Text">
+                    <span class="material-symbols-outlined group-hover:scale-110 transition-transform" style="font-size: 28px;">mic</span>
+                </button>
+            </div>
+
+            <div class="flex items-center justify-between px-6 py-4 border-t border-blue-50 dark:border-slate-700/50">
+                <div class="text-xs text-slate-400 font-medium">Character count: 0 / 5000</div>
+                <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-slate-400" style="font-size: 16px;">language</span>
+                    <span class="text-xs text-slate-400 font-medium">Automatic language detection active</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex items-center gap-4 mt-10 w-full sm:w-auto justify-center">
+            <button type="button" onclick="window.history.back()" class="flex-1 sm:flex-none px-8 py-3.5 rounded-xl border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 font-bold hover:bg-slate-100 dark:hover:bg-slate-800 transition-all min-w-[140px]">
+                Cancel
+            </button>
+
+            <button type="submit" class="flex-1 sm:flex-none px-12 py-3.5 rounded-xl bg-primary text-white font-bold hover:bg-blue-600 shadow-lg shadow-primary/25 transition-all min-w-[160px]">
+                Submit Grievance
+            </button>
+        </div>
+    </form>
+<div class="mt-12 mb-8">
+<button class="flex items-center gap-2 px-6 py-3 rounded-xl border-2 border-dashed border-primary/30 text-primary hover:bg-primary/5 hover:border-primary transition-all font-bold group">
+<span class="material-symbols-outlined group-hover:animate-pulse">mic</span>
+<span>🎤 Prefer speaking? Switch to Voice Mode</span>
+</button>
+</div>
+</main>
+<footer class="w-full py-8 border-t border-blue-100 dark:border-white/10 bg-surface-light dark:bg-surface-dark mt-auto">
+<div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="flex flex-wrap items-center justify-center gap-6 text-sm font-medium text-slate-500 dark:text-slate-400">
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms of Use</a>
+<a class="hover:text-primary transition-colors" href="#">Accessibility</a>
+<a class="hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined" style="font-size: 18px;">help</span>
+                    Help
+                </a>
+</div>
+</div>
+</footer>
+
+</body></html>

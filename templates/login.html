@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Naitram (नैत्रम्) - Login / Sign Up</title>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1E40AF", "primary-hover": "#1e3a8a",
+                        "background-light": "#eff6ff", "background-dark": "#0f172a",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1e293b",
+                        "text-light": "#1e3a8a", "text-dark": "#e2e8f0",
+                        "muted-light": "#64748b",
+                        "muted-dark": "#94a3b8",
+                        "border-light": "#bfdbfe", "border-dark": "#334155",
+                        "india-blue": "#000080",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"],
+                        "sans": ["Public Sans", "sans-serif"]
+                    },
+                    boxShadow: {
+                        'blue-glow': '0 4px 14px 0 rgba(29, 78, 216, 0.39)',
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark transition-colors duration-200">
+<div class="relative flex min-h-screen flex-col overflow-hidden">
+<header class="flex items-center justify-between border-b border-border-light dark:border-border-dark bg-surface-light dark:bg-surface-dark px-6 py-4 lg:px-10 shadow-sm z-20">
+<div class="flex items-center gap-4">
+<div class="flex h-12 w-12 items-center justify-center overflow-hidden">
+<svg class="h-full w-full drop-shadow-sm" fill="none" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+<path d="M 20 50 A 30 30 0 0 1 80 50" fill="none" stroke="#FF9933" stroke-linecap="round" stroke-width="6" transform="translate(0,-12)"></path>
+<path d="M 20 50 A 30 30 0 0 0 80 50" fill="none" stroke="#138808" stroke-linecap="round" stroke-width="6" transform="translate(0,12)"></path>
+<circle cx="50" cy="50" r="22" stroke="#000080" stroke-width="2.5"></circle>
+<circle cx="50" cy="50" fill="#000080" r="3"></circle>
+<g stroke="#000080" stroke-width="1.5">
+<line transform="rotate(0 50 50)" x1="50" x2="50" y1="28" y2="72"></line>
+<line transform="rotate(15 50 50)" x1="50" x2="50" y1="28" y2="72"></line>
+<line transform="rotate(30 50 50)" x1="50" x2="50" y1="28" y2="72"></line>
+<line transform="rotate(45 50 50)" x1="50" x2="50" y1="28" y2="72"></line>
+<line transform="rotate(60 50 50)" x1="50" x2="50" y1="28" y2="72"></line>
+<line transform="rotate(75 50 50)" x1="50" x2="50" y1="28" y2="72"></line>
+<line transform="rotate(90 50 50)" x1="50" x2="50" y1="28" y2="72"></line>
+<line transform="rotate(105 50 50)" x1="50" x2="50" y1="28" y2="72"></line>
+<line transform="rotate(120 50 50)" x1="50" x2="50" y1="28" y2="72"></line>
+<line transform="rotate(135 50 50)" x1="50" x2="50" y1="28" y2="72"></line>
+<line transform="rotate(150 50 50)" x1="50" x2="50" y1="28" y2="72"></line>
+<line transform="rotate(165 50 50)" x1="50" x2="50" y1="28" y2="72"></line>
+</g>
+</svg>
+</div>
+<div class="flex flex-col justify-center">
+<h2 class="text-2xl font-bold leading-none tracking-tight text-blue-900 dark:text-blue-100 font-sans flex items-center gap-2">
+                            नैत्रम् 
+<span class="hidden sm:inline-block text-[10px] font-bold text-blue-500 bg-blue-50 dark:bg-slate-800 px-2 py-0.5 rounded border border-blue-100 dark:border-slate-700 uppercase tracking-wide">Govt. of India Initiative</span>
+</h2>
+<span class="text-[10px] font-bold text-blue-600 dark:text-blue-300 tracking-wider uppercase mt-1">Voice of India</span>
+</div>
+</div>
+<button class="flex items-center gap-2 rounded-lg border border-border-light dark:border-border-dark bg-blue-50 dark:bg-slate-800 px-4 py-2 text-sm font-bold text-primary dark:text-blue-200 hover:bg-blue-100 dark:hover:bg-slate-700 transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[20px]">translate</span>
+<span class="truncate">English / हिंदी</span>
+</button>
+</header>
+<main class="flex flex-1 items-center justify-center p-4 sm:p-6 lg:p-8 relative z-10">
+<div class="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
+<div class="absolute -top-[20%] -right-[10%] w-[600px] h-[600px] rounded-full bg-blue-200/30 blur-3xl"></div>
+<div class="absolute bottom-[10%] -left-[10%] w-[500px] h-[500px] rounded-full bg-indigo-200/30 blur-3xl"></div>
+</div>
+<div class="flex w-full max-w-5xl overflow-hidden rounded-2xl bg-surface-light dark:bg-surface-dark shadow-2xl shadow-blue-900/10 ring-1 ring-blue-900/5 dark:ring-white/10">
+<div class="relative hidden w-1/2 flex-col justify-between bg-primary p-10 text-white lg:flex">
+<div class="absolute inset-0 bg-gradient-to-br from-blue-800 to-indigo-950 opacity-100"></div>
+<div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 mix-blend-overlay"></div>
+<div class="relative z-10">
+<div class="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-white/10 backdrop-blur-md shadow-inner border border-white/20">
+<span class="material-symbols-outlined text-4xl text-white">record_voice_over</span>
+</div>
+<h1 class="mb-4 text-4xl font-bold leading-tight">Speak freely.<br/>We are listening.</h1>
+<p class="text-blue-100 text-lg font-light leading-relaxed opacity-90">Revolutionizing grievance redressal with AI-driven voice technology for every citizen.</p>
+</div>
+<div class="relative z-10 mt-12 overflow-hidden rounded-xl bg-white/10 p-1.5 backdrop-blur-md border border-white/20 shadow-lg">
+<div class="h-56 w-full rounded-lg bg-cover bg-center relative overflow-hidden" data-alt="Indian woman using a mobile phone to record a voice message" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCY92ECk9vvhUkbLD7Xltd9f2cwQgxO_d7Y-XBeNhfEsVdAb5VJytLahTtPRpiGXzn9bDIjYO95qi14GkuruNx6Sv0Qi5KvE9dsaQA0ZJZxCgLlyc09Q_n6Et7ISx3XTIe7St2jwGx_bVRJqR_T49T8CgqfqmIiLvIhg1j7zcFU1uQ1yBzgYn-uOPl4bv1Z5GBADAipwRlCUH_ceFnGsKJNNTwwyrF2WoZNHPnWrGfV2t6Zsm87VbwH8G9ijSOQphiRIcQDDqAwX50');">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 w-full p-4">
+<div class="flex items-center gap-2.5 text-sm font-semibold text-white">
+<div class="bg-green-500 rounded-full p-0.5 flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px] text-white font-bold">check</span>
+</div>
+<span>10,000+ Voices Heard &amp; Resolved</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="flex w-full flex-col justify-center p-8 sm:p-12 lg:w-1/2 relative bg-white dark:bg-surface-dark">
+<div class="mb-8 flex flex-col items-center justify-center gap-3 animate-in fade-in zoom-in duration-500">
+<div class="relative flex items-center justify-center h-24 w-24 rounded-full bg-blue-50/50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 shadow-sm p-4">
+<svg class="h-full w-full drop-shadow-sm" fill="none" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+<path d="M 20 50 A 30 30 0 0 1 80 50" fill="none" stroke="#FF9933" stroke-linecap="round" stroke-width="6" transform="translate(0,-12)"></path>
+<path d="M 20 50 A 30 30 0 0 0 80 50" fill="none" stroke="#138808" stroke-linecap="round" stroke-width="6" transform="translate(0,12)"></path>
+<circle cx="50" cy="50" r="22" stroke="#000080" stroke-width="2.5"></circle>
+<circle cx="50" cy="50" fill="#000080" r="3"></circle>
+<g stroke="#000080" stroke-width="1.5">
+<line transform="rotate(0 50 50)" x1="50" x2="50" y1="28" y2="72"></line>
+<line transform="rotate(15 50 50)" x1="50" x2="50" y1="28" y2="72"></line>
+<line transform="rotate(30 50 50)" x1="50" x2="50" y1="28" y2="72"></line>
+<line transform="rotate(45 50 50)" x1="50" x2="50" y1="28" y2="72"></line>
+<line transform="rotate(60 50 50)" x1="50" x2="50" y1="28" y2="72"></line>
+<line transform="rotate(75 50 50)" x1="50" x2="50" y1="28" y2="72"></line>
+<line transform="rotate(90 50 50)" x1="50" x2="50" y1="28" y2="72"></line>
+<line transform="rotate(105 50 50)" x1="50" x2="50" y1="28" y2="72"></line>
+<line transform="rotate(120 50 50)" x1="50" x2="50" y1="28" y2="72"></line>
+<line transform="rotate(135 50 50)" x1="50" x2="50" y1="28" y2="72"></line>
+<line transform="rotate(150 50 50)" x1="50" x2="50" y1="28" y2="72"></line>
+<line transform="rotate(165 50 50)" x1="50" x2="50" y1="28" y2="72"></line>
+</g>
+</svg>
+</div>
+<span class="text-[12px] font-bold uppercase tracking-[0.2em] text-blue-800 dark:text-blue-300 opacity-90">Voice of India</span>
+</div>
+<div class="mb-8">
+<div class="flex w-full rounded-xl bg-blue-50 p-1 dark:bg-slate-800 mb-6 border border-blue-100 dark:border-slate-700">
+    <a href="{{ url_for('login') }}" class="flex w-1/2 items-center justify-center">
+        <button class="w-full rounded-lg py-2.5 text-sm font-bold transition-all 
+            {{ 'bg-white shadow-sm text-primary dark:bg-slate-700 dark:text-white ring-1 ring-blue-100 dark:ring-white/10' if request.endpoint == 'login' else 'text-muted-light dark:text-muted-dark hover:text-primary dark:hover:text-white' }}">
+            Login
+        </button>
+    </a>
+
+    <a href="{{ url_for('signup') }}" class="flex w-1/2 items-center justify-center">
+        <button class="w-full rounded-lg py-2.5 text-sm font-bold transition-all 
+            {{ 'bg-white shadow-sm text-primary dark:bg-slate-700 dark:text-white ring-1 ring-blue-100 dark:ring-white/10' if request.endpoint == 'signup' else 'text-muted-light dark:text-muted-dark hover:text-primary dark:hover:text-white' }}">
+            Sign Up
+        </button>
+    </a>
+</div>
+<h2 class="text-2xl font-bold text-blue-900 dark:text-white sm:text-3xl tracking-tight">Login / Identity Verification</h2>
+<p class="mt-2 text-sm text-muted-light dark:text-muted-dark">Securely access your dashboard via OTP.</p>
+</div>
+<div class="flex flex-col gap-6">
+<div class="flex flex-col gap-5">
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<label class="text-sm font-semibold text-blue-800 dark:text-blue-200">Email</label>
+<button class="text-xs font-bold text-blue-600 hover:text-blue-800 transition-colors hover:underline">Change</button>
+</div>
+<div class="flex rounded-lg border border-blue-200 bg-blue-50/30 dark:bg-slate-800 dark:border-slate-600 overflow-hidden transition-all group focus-within:ring-2 focus-within:ring-blue-500/20 focus-within:border-blue-400">
+<div class="flex items-center border-r border-blue-200 dark:border-slate-600 bg-blue-50 dark:bg-slate-700 px-3 py-3">
+<img alt="India Flag" class="mr-2 rounded-sm shadow-sm h-4 w-6 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCROyL6misvhUhypeFVWcF5dvDP0EIWcwleuZDeNccnPkuvBOJGsykd1ToDH-v1PVk1NoywV_kBOFPMilLV6OXo-a5c-BrKu8wTqZHyjXt7ZDEPS6Oj4im2nI0NZYesnQlYhKRW69VPWCaiPmR1XuCbvZGDMZNWVXQZ-p_l4lyOgz5zrDbMkoDTk1ZFkKmf-w-uZW5CBhjJ4SY0Ugj8JtoWWgttRHfc-1lbi3K7tN-ZRIWAhC6hONtBGU-ADqY4yWuIU7ZpbfPJYoA"/>
+<span class="text-sm font-bold text-blue-900 dark:text-white"></span>
+</div>
+<input class="w-full border-none bg-transparent px-4 py-3 text-base text-blue-900 dark:text-white font-semibold focus:ring-0 cursor-default" readonly="" type="tel" value="Enter Email"/>
+<div class="flex items-center px-3">
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-3 animate-in fade-in slide-in-from-top-4 duration-500">
+<div class="flex items-center justify-between">
+<label class="text-sm font-semibold text-blue-800 dark:text-blue-200">One Time Password (OTP)</label>
+<div class="flex items-center gap-1.5 rounded-full bg-blue-100/50 dark:bg-blue-900/30 px-3 py-1 border border-blue-200 dark:border-blue-800">
+<span class="material-symbols-outlined text-[16px] text-blue-600 dark:text-blue-400">timer</span>
+<span class="text-xs font-bold text-blue-700 dark:text-blue-300 font-mono">00:45</span>
+</div>
+</div>
+<div class="relative group">
+<input autocomplete="one-time-code" autofocus="" class="w-full rounded-lg border-2 border-blue-200 dark:border-slate-600 bg-white dark:bg-slate-800 px-4 py-4 text-center text-2xl font-bold tracking-[0.6em] text-blue-900 dark:text-white focus:border-primary focus:ring-4 focus:ring-blue-500/10 placeholder:tracking-widest placeholder:font-normal placeholder:text-blue-200 transition-all outline-none shadow-sm" maxlength="6" placeholder="000000" type="text"/>
+</div>
+<div class="flex items-center justify-between mt-1">
+<p class="text-xs text-muted-light dark:text-muted-dark">
+                                        OTP sent to <span class="font-semibold text-blue-700 dark:text-blue-300 font-mono">******@gmail.com</span>
+</p>
+<button class="text-xs font-bold text-primary hover:text-primary-dark hover:underline transition-colors flex items-center gap-1">
+                                        Resend OTP
+                                    </button>
+</div>
+</div>
+<form method="POST">
+    <button type="submit" class="group mt-4 flex h-14 w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-blue-700 to-blue-800 hover:from-blue-800 hover:to-blue-900 transition-all text-white font-bold text-lg shadow-blue-glow active:scale-[0.98] duration-150 ring-1 ring-white/10">
+        <span>Verify & Proceed</span>
+        <span class="material-symbols-outlined text-[24px] transition-transform group-hover:translate-x-1">arrow_forward</span>
+    </button>
+</form>
+</div>
+<div class="relative flex items-center py-2">
+<div class="flex-grow border-t border-blue-100 dark:border-slate-700"></div>
+<span class="flex-shrink-0 px-4 text-[11px] font-bold text-blue-300 dark:text-slate-500 uppercase tracking-widest">Or continue with</span>
+<div class="flex-grow border-t border-blue-100 dark:border-slate-700"></div>
+</div>
+<div class="rounded-xl bg-blue-50/40 dark:bg-slate-800/50 p-4 border border-blue-100 dark:border-slate-700 transition-all hover:bg-blue-50 hover:border-blue-200 hover:shadow-sm cursor-pointer group/guest">
+<div class="flex items-start gap-4">
+<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white dark:bg-blue-900/30 text-primary shadow-sm border border-blue-100 dark:border-blue-800 group-hover/guest:scale-110 transition-transform">
+<span class="material-symbols-outlined">person</span>
+</div>
+<div class="flex flex-col gap-1">
+<div>
+<p class="text-sm font-bold text-blue-900 dark:text-white">Reporting a minor issue?</p>
+<p class="text-xs text-muted-light dark:text-muted-dark leading-relaxed">Skip verification for non-critical complaints.</p>
+</div>
+<button class="self-start text-sm font-bold text-primary hover:text-primary-dark group-hover/guest:underline underline-offset-4 decoration-2 flex items-center gap-1 mt-1 transition-all">
+                                        Continue as Guest 
+                                        <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-8 flex items-center justify-center gap-6 border-t border-blue-100 dark:border-slate-700 pt-6">
+<div class="flex items-center gap-2 opacity-70 transition-all hover:opacity-100">
+<span class="material-symbols-outlined text-blue-600 text-[18px]">lock</span>
+<span class="text-[11px] font-bold text-muted-light dark:text-muted-dark uppercase tracking-wide">End-to-End Encrypted</span>
+</div>
+<div class="h-4 w-px bg-blue-200 dark:bg-slate-700"></div>
+<div class="flex items-center gap-2 opacity-70 transition-all hover:opacity-100">
+<span class="material-symbols-outlined text-blue-600 text-[18px]">verified_user</span>
+<span class="text-[11px] font-bold text-muted-light dark:text-muted-dark uppercase tracking-wide">Govt. Compliant</span>
+</div>
+</div>
+</div>
+</div>
+<div class="fixed bottom-0 left-0 w-full p-2 text-center text-[10px] text-blue-300 dark:text-slate-600 lg:hidden">
+                © 2024 Naitram. All rights reserved.
+            </div>
+</main>
+</div>
+</body></html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Post-Login Department Dashboard - नैत्रम्</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1173d4",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        body {
+            font-family: 'Public Sans', sans-serif;
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            transition: all 0.3s ease;
+        }
+        .logo-brush-orange { fill: #FF9933; }
+        .logo-brush-green { fill: #138808; }
+        .logo-chakra-blue { fill: #000080; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen flex flex-col font-display">
+<header class="w-full bg-white dark:bg-slate-900 border-b border-solid border-[#e7edf3] dark:border-slate-800 px-6 md:px-20 lg:px-40 py-4 flex items-center justify-between sticky top-0 z-50">
+<div class="flex items-center gap-4 text-[#0d141b] dark:text-white">
+<div class="relative size-10 flex items-center justify-center">
+<svg class="w-full h-full" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+<path d="M20 35 C 35 25, 65 25, 80 35" fill="none" stroke="#FF9933" stroke-linecap="round" stroke-width="8"></path>
+<path d="M20 65 C 35 75, 65 75, 80 65" fill="none" stroke="#138808" stroke-linecap="round" stroke-width="8"></path>
+
+<g stroke="#000080" stroke-width="0.8">
+<line x1="50" x2="50" y1="38" y2="62"></line>
+<line x1="38" x2="62" y1="50" y2="50"></line>
+<line x1="41.5" x2="58.5" y1="41.5" y2="58.5"></line>
+<line x1="58.5" x2="41.5" y1="41.5" y2="58.5"></line>
+<line x1="45.5" x2="54.5" y1="38.5" y2="61.5"></line>
+<line x1="38.5" x2="61.5" y1="45.5" y2="54.5"></line>
+<line x1="54.5" x2="45.5" y1="38.5" y2="61.5"></line>
+<line x1="61.5" x2="38.5" y1="45.5" y2="54.5"></line>
+</g>
+</svg>
+</div>
+<h2 class="text-[#0d141b] dark:text-slate-100 text-lg font-bold leading-tight tracking-[-0.015em] uppercase">
+                नैत्रम्
+</h2>
+</div>
+<div class="flex items-center gap-6">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary/20 shadow-sm cursor-pointer" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDvMV7hqdFPxGif3vYIsqDXqhomUOsCJ3fFvP0QtoFqMMXuUhCyouWBZOfc_7PLUNey1g8srzzUpLckv7su0j_Ft2bjOaOz8T42ak0_nxyeC-eEgHLoZmc06KFtVfPXon4LSy8GHna_KjEIxDmrLvWOV_8YVzYZEcfRGQUuPk0E6IAqQ_KL0JTbytHL3QKNHfXRjZhrlYZ_tSmX_x0QYAQJwA6IuSMYQH9i0ob_9MbsUcUa-bpbouvmLt291EUyIi632PisGqh1T5c");'>
+</div>
+</div>
+</header>
+<main class="flex-grow flex flex-col items-center justify-center px-6 py-12 md:py-20 max-w-[1200px] mx-auto w-full">
+<div class="mb-12">
+<p class="text-[#4c739a] dark:text-slate-400 text-center mt-2 text-lg">Select a category to manage citizen reports</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-[960px]">
+<a class="group card-hover flex flex-col items-center justify-center p-10 bg-white dark:bg-slate-800 rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.05)] border border-transparent hover:border-primary transition-all" href="{{ url_for('gov_new_complaints') }}">
+        <div class="size-24 rounded-full bg-primary/10 flex items-center justify-center mb-6 text-primary group-hover:scale-110 transition-transform">
+            <span class="material-symbols-outlined !text-5xl">notifications_active</span>
+        </div>
+        <div class="text-center">
+            <h3 class="text-[#0d141b] dark:text-white text-2xl font-bold mb-2">New Complaints</h3>
+            <p class="text-[#4c739a] dark:text-slate-400 text-base leading-relaxed">Review and categorize incoming reports from citizens across the nation.</p>
+        </div>
+        <div class="mt-8 flex items-center text-primary font-bold group-hover:gap-2 transition-all">
+            
+            <span>View All</span>
+            <span class="material-symbols-outlined">chevron_right</span>
+        </div>
+</a>
+<a class="group card-hover flex flex-col items-center justify-center p-10 bg-white dark:bg-slate-800 rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.05)] border border-transparent hover:border-primary transition-all" href="{{ url_for('gov_accepted_complaints') }}">
+<div class="size-24 rounded-full bg-green-500/10 flex items-center justify-center mb-6 text-green-600 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined !text-5xl">task_alt</span>
+</div>
+<div class="text-center">
+<h3 class="text-[#0d141b] dark:text-white text-2xl font-bold mb-2">Accepted Complaints</h3>
+<p class="text-[#4c739a] dark:text-slate-400 text-base leading-relaxed">Access your approved cases currently under investigation or resolution.</p>
+</div>
+<div class="mt-8 flex items-center text-green-600 font-bold group-hover:gap-2 transition-all">
+<span>Manage Cases</span>
+<span class="material-symbols-outlined">chevron_right</span>
+</div>
+</a>
+</div>
+</main>
+<footer class="mt-auto py-10 border-t border-slate-200 dark:border-slate-800">
+<div class="max-w-[960px] mx-auto px-6 text-center">
+<div class="flex items-center justify-center gap-2 mb-3">
+<div class="size-5 flex items-center justify-center">
+<svg class="w-full h-full opacity-60" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+<path class="text-slate-400" d="M50 10 V90 M10 50 H90" stroke="currentColor" stroke-width="4"></path>
+</svg>
+</div>
+</div>
+<div class="mt-4 flex justify-center gap-6 text-xs text-[#4c739a]/60 font-medium">
+</div>
+</div>
+</footer>
+
+</body></html>

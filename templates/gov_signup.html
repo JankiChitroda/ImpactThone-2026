@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Department Registration | नैत्रम्</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1173d4",
+                        "secondary": "#334155",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .chakra-brush-orange { color: #FF9933; }
+            .chakra-brush-green { color: #138808; }
+            .chakra-blue { color: #000080; }
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#0d141b] transition-colors duration-200">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[#e7edf3] dark:border-slate-800 bg-white dark:bg-background-dark px-10 py-3 sticky top-0 z-50">
+<div class="flex items-center gap-4">
+<div class="relative size-12 flex items-center justify-center">
+<svg class="w-full h-full" fill="none" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+<path d="M20 30C35 15 65 15 80 30" fill="none" stroke="#FF9933" stroke-linecap="round" stroke-width="8"></path>
+<path d="M20 70C35 85 65 85 80 70" fill="none" stroke="#138808" stroke-linecap="round" stroke-width="8"></path>
+<circle cx="50" cy="50" fill="none" r="18" stroke="#000080" stroke-width="2"></circle>
+<circle cx="50" cy="50" fill="#000080" r="3"></circle>
+<g stroke="#000080" stroke-width="1">
+<line x1="50" x2="50" y1="32" y2="68"></line>
+<line x1="32" x2="68" y1="50" y2="50"></line>
+<line x1="37.2" x2="62.8" y1="37.2" y2="62.8"></line>
+<line x1="37.2" x2="62.8" y1="62.8" y2="37.2"></line>
+<line x1="43.5" x2="56.5" y1="33" y2="67"></line>
+<line x1="33" x2="67" y1="43.5" y2="56.5"></line>
+<line x1="43.5" x2="56.5" y1="67" y2="33"></line>
+<line x1="33" x2="67" y1="56.5" y2="43.5"></line>
+</g>
+</svg>
+</div>
+<div>
+<h2 class="text-[#0d141b] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">नैत्रम् </h2>
+<p class="text-[#4c739a] text-[10px] font-bold tracking-widest uppercase">VOICE OF INDIA</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="text-sm font-bold text-[#0d141b] dark:text-white uppercase tracking-[0.2em]">VOICE OF INDIA</span>
+</div>
+</header>
+<main class="flex flex-1 flex-col items-center justify-center py-12 px-4">
+<div class="w-full max-w-[540px]">
+<div class="mb-8">
+<h1 class="text-[#0d141b] dark:text-white tracking-tight text-[32px] font-bold leading-tight text-center pb-2">Create Portal Account</h1>
+<p class="text-[#4c739a] dark:text-slate-400 text-sm font-normal leading-normal text-center">Standard Procedure for New Department Onboarding</p>
+</div>
+<div class="bg-white dark:bg-slate-900 shadow-xl rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800">
+<div class="p-8">
+<div class="mb-8 flex flex-col items-center gap-3">
+<div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-2">
+<span class="material-symbols-outlined text-primary text-3xl">domain_add</span>
+</div>
+<h3 class="text-xl font-bold text-[#0d141b] dark:text-white">Department Registration</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm text-center">Register your department to access the centralized governance dashboard.</p>
+</div>
+<form class="space-y-5">
+<div class="flex flex-col gap-2">
+<label class="text-[#0d141b] dark:text-slate-200 text-sm font-semibold leading-normal flex items-center gap-2">
+<span class="material-symbols-outlined text-xs">account_balance</span>
+                                    Department Name
+                                </label>
+<input class="form-input flex w-full rounded-lg text-[#0d141b] dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/20 border border-[#cfdbe7] dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:border-primary h-12 placeholder:text-[#4c739a]/60 p-[15px] text-base font-normal transition-all" placeholder="Enter Full Department Name" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-[#0d141b] dark:text-slate-200 text-sm font-semibold leading-normal flex items-center gap-2">
+<span class="material-symbols-outlined text-xs">badge</span>
+                                    Department ID / Official Government Email
+                                </label>
+<div class="relative">
+<input class="form-input flex w-full rounded-lg text-[#0d141b] dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/20 border border-[#cfdbe7] dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:border-primary h-12 placeholder:text-[#4c739a]/60 p-[15px] pr-28 text-base font-normal transition-all" placeholder="e.g. directorate@nic.in" type="text"/>
+<button class="absolute right-2 top-1.5 h-9 px-4 bg-secondary hover:bg-slate-700 text-white text-xs font-bold rounded-md transition-colors flex items-center gap-1 shadow-sm" type="button">
+                                        Get OTP
+                                    </button>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-[#0d141b] dark:text-slate-200 text-sm font-semibold leading-normal flex items-center gap-2">
+<span class="material-symbols-outlined text-xs">pin</span>
+                                    Enter OTP
+                                </label>
+<input class="form-input flex w-full rounded-lg text-[#0d141b] dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/20 border border-[#cfdbe7] dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:border-primary h-12 placeholder:text-[#4c739a]/60 p-[15px] text-base font-normal transition-all" maxlength="6" placeholder="6-digit code" type="text"/>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="flex flex-col gap-2">
+<label class="text-[#0d141b] dark:text-slate-200 text-sm font-semibold leading-normal flex items-center gap-2">
+<span class="material-symbols-outlined text-xs">lock</span>
+                                        Password
+                                    </label>
+<input class="form-input flex w-full rounded-lg text-[#0d141b] dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/20 border border-[#cfdbe7] dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:border-primary h-12 placeholder:text-[#4c739a]/60 p-[15px] text-base font-normal transition-all" placeholder="••••••••" type="password"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-[#0d141b] dark:text-slate-200 text-sm font-semibold leading-normal flex items-center gap-2">
+<span class="material-symbols-outlined text-xs">verified_user</span>
+                                        Confirm Password
+                                    </label>
+<input class="form-input flex w-full rounded-lg text-[#0d141b] dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/20 border border-[#cfdbe7] dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:border-primary h-12 placeholder:text-[#4c739a]/60 p-[15px] text-base font-normal transition-all" placeholder="••••••••" type="password"/>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-[#0d141b] dark:text-slate-200 text-sm font-semibold leading-normal flex items-center gap-2">
+<span class="material-symbols-outlined text-xs">category</span>
+                                    Department Category
+                                </label>
+<select class="form-select flex w-full rounded-lg text-[#0d141b] dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/20 border border-[#cfdbe7] dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:border-primary h-12 p-[10px] text-base font-normal transition-all appearance-none">
+<option disabled="" selected="" value="">Select Category</option>
+<option value="health">Health</option>
+<option value="municipal">Municipal Services</option>
+<option value="safety">Public Safety</option>
+<option value="utilities">Utilities</option>
+<option value="finance">Finance &amp; Treasury</option>
+<option value="education">Education</option>
+</select>
+</div>
+<div class="pt-4">
+    <a href="{{ url_for('gov_dashboard') }}" class="block w-full">
+        <button class="w-full h-12 bg-primary hover:bg-primary/90 text-white font-bold rounded-lg transition-colors flex items-center justify-center gap-2 shadow-lg shadow-primary/20" type="button">
+            <span>Register Department</span>
+            <span class="material-symbols-outlined text-xl">how_to_reg</span>
+        </button>
+    </a>
+</div>
+</form>
+<div class="mt-8 pt-6 border-t border-slate-100 dark:border-slate-800 text-center">
+<p class="text-slate-500 dark:text-slate-400 text-sm">
+                                Already have an account? 
+                                <a class="text-primary font-bold hover:underline ml-1" href="{{ url_for('gov_login') }}">Login</a>
+</p>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-center px-2">
+<a class="text-xs font-medium text-[#4c739a] hover:text-primary flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-sm">info</span>
+                        Registration Guidelines &amp; Documentation
+                    </a>
+</div>
+</div>
+</main>
+<footer class="mt-auto py-8 px-4 border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark/50">
+<div class="max-w-[960px] mx-auto text-center space-y-2">
+<p class="text-[#4c739a] dark:text-slate-500 text-sm font-medium">
+                    © 2026 नैत्रम् Portal. All rights reserved.
+                </p>
+<div class="flex items-center justify-center gap-2 text-slate-400 dark:text-slate-600 text-xs">
+<span class="material-symbols-outlined text-xs">verified</span>
+<span>A Government of India Initiative</span>
+</div>
+<div class="flex items-center justify-center gap-6 pt-4">
+<a class="text-xs text-slate-400 hover:text-primary" href="#">Terms of Service</a>
+<a class="text-xs text-slate-400 hover:text-primary" href="#">Privacy Policy</a>
+<a class="text-xs text-slate-400 hover:text-primary" href="#">Accessibility Statement</a>
+</div>
+</div>
+</footer>
+</div>
+
+</body></html>

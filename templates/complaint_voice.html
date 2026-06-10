@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Voice Complaint Input Screen</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;700&amp;family=Public+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3b82f6", // Vibrant Blue
+                        "background-light": "#eff6ff", // Light Blue tint
+                        "background-dark": "#0f172a", // Dark Slate Blue
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1e293b", // Slate
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "Noto Sans Devanagari", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased min-h-screen flex flex-col overflow-hidden text-slate-900 dark:text-white transition-colors duration-200">
+<header class="flex items-center justify-between border-b border-solid border-blue-100 dark:border-white/10 px-6 py-4 lg:px-10 bg-surface-light dark:bg-surface-dark transition-colors duration-200">
+<div class="flex items-center gap-3">
+<div class="flex items-center justify-center">
+<svg class="w-10 h-10 md:w-12 md:h-12" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 24C4 12.9543 12.9543 4 24 4C35.0457 4 44 12.9543 44 24" stroke="#FF9933" stroke-linecap="round" stroke-width="4"></path>
+<path d="M44 24C44 35.0457 35.0457 44 24 44C12.9543 44 4 35.0457 4 24" stroke="#138808" stroke-linecap="round" stroke-width="4"></path>
+<circle cx="24" cy="24" r="10" stroke="#000080" stroke-width="2"></circle>
+<circle cx="24" cy="24" fill="#000080" r="1.5"></circle>
+<g opacity="0.9" stroke="#000080" stroke-width="1">
+<line x1="24" x2="24" y1="14" y2="34"></line>
+<line x1="14" x2="34" y1="24" y2="24"></line>
+<line x1="17" x2="31" y1="17" y2="31"></line>
+<line x1="31" x2="17" y1="17" y2="31"></line>
+<line transform="rotate(22.5 24 24)" x1="24" x2="24" y1="14" y2="34"></line>
+<line transform="rotate(22.5 24 24)" x1="14" x2="34" y1="24" y2="24"></line>
+<line transform="rotate(22.5 24 24)" x1="17" x2="31" y1="17" y2="31"></line>
+<line transform="rotate(22.5 24 24)" x1="31" x2="17" y1="17" y2="31"></line>
+</g>
+</svg>
+</div>
+<h2 class="text-xl lg:text-2xl font-bold leading-tight tracking-tight text-slate-900 dark:text-white">नैत्रम्</h2>
+</div>
+<button class="flex items-center justify-center gap-2 overflow-hidden rounded-lg h-10 px-4 bg-primary/10 text-slate-900 dark:text-white text-sm font-bold hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">
+<span class="material-symbols-outlined" style="font-size: 20px;">translate</span>
+<span class="truncate">English / Hindi</span>
+<span class="material-symbols-outlined" style="font-size: 20px;">arrow_drop_down</span>
+</button>
+</header>
+<main class="flex-1 flex flex-col items-center justify-center px-4 py-8 relative w-full max-w-5xl mx-auto">
+<div class="mb-8 flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300 border border-red-200 dark:border-red-800">
+<div class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></div>
+<span class="text-xs font-bold uppercase tracking-wider">Listening</span>
+</div>
+<div class="text-center max-w-2xl mx-auto mb-12">
+<h1 class="text-3xl md:text-5xl font-bold leading-tight tracking-tight text-slate-900 dark:text-white mb-4">
+            Tap &amp; Speak to file your complaint
+        </h1>
+<p class="text-base md:text-lg text-slate-600 dark:text-slate-400 font-normal">
+            Please speak clearly in your chosen language. We are recording your grievance.
+        </p>
+</div>
+<div class="w-full max-w-3xl h-32 flex items-center justify-center gap-1.5 md:gap-3 mb-16 px-4">
+<div class="w-2 md:w-3 bg-primary/30 rounded-full h-8"></div>
+<div class="w-2 md:w-3 bg-primary/40 rounded-full h-12"></div>
+<div class="w-2 md:w-3 bg-primary/60 rounded-full h-16"></div>
+<div class="w-2 md:w-3 bg-primary rounded-full h-24"></div>
+<div class="w-2 md:w-3 bg-primary rounded-full h-14"></div>
+<div class="w-2 md:w-3 bg-primary/80 rounded-full h-20"></div>
+<div class="w-2 md:w-3 bg-primary rounded-full h-32"></div>
+<div class="w-2 md:w-3 bg-primary rounded-full h-28"></div>
+<div class="w-2 md:w-3 bg-primary/90 rounded-full h-16"></div>
+<div class="w-2 md:w-3 bg-primary/70 rounded-full h-10"></div>
+<div class="w-2 md:w-3 bg-primary/50 rounded-full h-18"></div>
+<div class="w-2 md:w-3 bg-primary/80 rounded-full h-24"></div>
+<div class="w-2 md:w-3 bg-primary rounded-full h-28"></div>
+<div class="w-2 md:w-3 bg-primary/60 rounded-full h-12"></div>
+<div class="w-2 md:w-3 bg-primary/40 rounded-full h-8"></div>
+<div class="w-2 md:w-3 bg-primary/30 rounded-full h-4"></div>
+</div>
+<div class="mb-8">
+</div>
+<div class="flex items-center justify-center gap-8 relative z-10">
+<button class="flex flex-col items-center justify-center gap-2 group">
+<div class="w-14 h-14 rounded-full bg-surface-light dark:bg-surface-dark border border-slate-200 dark:border-slate-700 flex items-center justify-center shadow-sm group-hover:bg-red-50 dark:group-hover:bg-red-900/20 transition-all">
+<span class="material-symbols-outlined text-slate-500 group-hover:text-red-500 dark:text-slate-400 dark:group-hover:text-red-400" style="font-size: 24px;">close</span>
+</div>
+<span class="text-sm font-medium text-slate-500 dark:text-slate-400 group-hover:text-red-600 dark:group-hover:text-red-400">Cancel</span>
+</button>
+<button id="micButton" class="relative group">
+    <div class="absolute inset-0 bg-primary/20 rounded-full scale-125"></div>
+    <div class="absolute inset-0 bg-primary/10 rounded-full scale-150"></div>
+    <div class="relative w-24 h-24 md:w-32 md:h-32 rounded-full bg-primary flex items-center justify-center shadow-lg shadow-primary/30 hover:shadow-primary/50 hover:scale-105 transition-all duration-300">
+        <span class="material-symbols-outlined text-white" style="font-size: 48px;">mic</span>
+    </div>
+</button>
+<button id="doneButton" class="flex flex-col items-center justify-center gap-2 group">
+    <div class="w-14 h-14 rounded-full bg-surface-light dark:bg-surface-dark border border-slate-200 dark:border-slate-700 flex items-center justify-center shadow-sm group-hover:bg-primary/20 dark:group-hover:bg-primary/10 transition-all">
+        <span class="material-symbols-outlined text-slate-500 group-hover:text-primary dark:text-slate-400 dark:group-hover:text-primary" style="font-size: 24px;">check</span>
+    </div>
+    <span class="text-sm font-medium text-slate-500 dark:text-slate-400 group-hover:text-primary dark:group-hover:text-primary">Done</span>
+</button>
+</div>
+</main>
+<footer class="w-full py-6 text-center border-t border-blue-100 dark:border-white/10 bg-surface-light dark:bg-surface-dark mt-auto">
+</footer>
+
+
+<script>
+    let mediaRecorder;
+    let audioChunks = [];
+    let isRecording = false;
+
+    const micButton = document.getElementById('micButton');
+    const doneButton = document.getElementById('doneButton');
+    const headerStatus = document.querySelector('h1');
+
+    async function startRecording() {
+        try {
+            const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+            mediaRecorder = new MediaRecorder(stream);
+            
+            mediaRecorder.ondataavailable = (event) => {
+                if (event.data.size > 0) audioChunks.push(event.data);
+            };
+
+            mediaRecorder.onstop = async () => {
+                headerStatus.innerText = "Transcribing your voice... Please wait.";
+                
+                const audioBlob = new Blob(audioChunks, { type: 'audio/wav' });
+                const formData = new FormData();
+                formData.append('audio_data', audioBlob);
+
+                try {
+                    const response = await fetch('/process-voice', {
+                        method: 'POST',
+                        body: formData
+                    });
+                    const data = await response.json();
+                    
+                    // Redirect using the text from Python
+                    window.location.href = `/complaint-summary?text=${encodeURIComponent(data.transcript)}`;
+                } catch (err) {
+                    console.error("Fetch error:", err);
+                    headerStatus.innerText = "Error sending audio to server.";
+                }
+            };
+
+            mediaRecorder.start();
+            isRecording = true;
+            micButton.classList.add('animate-pulse');
+            console.log("Recorder is now ACTIVE");
+        } catch (err) {
+            alert("Microphone access denied. Please allow it in browser settings.");
+        }
+    }
+
+    micButton.onclick = () => {
+        if (!isRecording) {
+            audioChunks = [];
+            startRecording();
+        } else {
+            stopAndSave();
+        }
+    };
+
+    doneButton.onclick = (e) => {
+        e.preventDefault();
+        if (isRecording && mediaRecorder && mediaRecorder.state === "recording") {
+            stopAndSave();
+        } else {
+            alert("Please wait for the microphone to start or tap it first!");
+        }
+    };
+
+    function stopAndSave() {
+        mediaRecorder.stop();
+        isRecording = false;
+        micButton.classList.remove('animate-pulse');
+    }
+</script>
+
+</body></html>

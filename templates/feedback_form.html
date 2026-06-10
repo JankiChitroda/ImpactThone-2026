@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Feedback Screen - Netram</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700;900&amp;family=Public+Sans:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3b82f6", // Blue-500
+                        "background-light": "#eff6ff", // Blue-50
+                        "background-dark": "#0f172a", // Slate-900
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "Noto Sans", "sans-serif"],
+                        "hindi": ["Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1;
+        }
+        textarea::-webkit-scrollbar {
+            width: 8px;
+        }
+        textarea::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        textarea::-webkit-scrollbar-thumb {
+            background-color: #93c5fd;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#1e293b] dark:text-[#e0e0e0] font-display min-h-screen flex flex-col overflow-x-hidden selection:bg-primary selection:text-white">
+<header class="sticky top-0 z-50 flex items-center justify-between border-b border-[#dbeafe] dark:border-white/10 px-4 md:px-10 py-3 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md">
+<div class="flex items-center gap-4">
+<div class="size-16 flex items-center justify-center shrink-0">
+<svg class="w-full h-full drop-shadow-md hover:scale-105 transition-transform duration-500" fill="none" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+<circle cx="50" cy="50" fill="white" r="28"></circle>
+<path d="M10 55 C10 20 30 5 50 5 C70 5 90 20 90 55" stroke="#FF9933" stroke-linecap="round" stroke-width="8"></path>
+<path d="M90 45 C90 80 70 95 50 95 C30 95 10 80 10 45" stroke="#138808" stroke-linecap="round" stroke-width="8"></path>
+<g stroke="#000080">
+<circle cx="50" cy="50" r="18" stroke-width="2.5"></circle>
+<circle cx="50" cy="50" fill="#000080" r="3" stroke="none"></circle>
+<g stroke-width="1.2">
+<line transform="rotate(0 50 50)" x1="50" x2="50" y1="32" y2="68"></line>
+<line transform="rotate(15 50 50)" x1="50" x2="50" y1="32" y2="68"></line>
+<line transform="rotate(30 50 50)" x1="50" x2="50" y1="32" y2="68"></line>
+<line transform="rotate(45 50 50)" x1="50" x2="50" y1="32" y2="68"></line>
+<line transform="rotate(60 50 50)" x1="50" x2="50" y1="32" y2="68"></line>
+<line transform="rotate(75 50 50)" x1="50" x2="50" y1="32" y2="68"></line>
+<line transform="rotate(90 50 50)" x1="50" x2="50" y1="32" y2="68"></line>
+<line transform="rotate(105 50 50)" x1="50" x2="50" y1="32" y2="68"></line>
+<line transform="rotate(120 50 50)" x1="50" x2="50" y1="32" y2="68"></line>
+<line transform="rotate(135 50 50)" x1="50" x2="50" y1="32" y2="68"></line>
+<line transform="rotate(150 50 50)" x1="50" x2="50" y1="32" y2="68"></line>
+<line transform="rotate(165 50 50)" x1="50" x2="50" y1="32" y2="68"></line>
+</g>
+</g>
+</svg>
+</div>
+<div class="flex flex-col">
+<h2 class="text-3xl font-black leading-none tracking-tight text-[#1e293b] dark:text-white font-hindi">नैत्रम्</h2>
+<span class="text-[0.6rem] font-bold text-[#64748b] dark:text-[#94a3b8] uppercase tracking-wider leading-tight">Govt. of India Initiative</span>
+<span class="text-xs font-bold text-primary tracking-[0.2em] uppercase mt-0.5">Voice of India</span>
+</div>
+</div>
+<div class="flex items-center gap-3 sm:gap-6">
+<a class="text-sm font-bold text-[#64748b] dark:text-[#94a3b8] hover:text-primary transition-colors" href="#">Login</a>
+<a class="px-5 py-2.5 bg-primary hover:bg-[#1d4ed8] text-white text-sm font-bold rounded-lg shadow-lg shadow-primary/20 transition-all hover:shadow-primary/40 active:scale-95" href="#">
+                Sign Up
+            </a>
+</div>
+</header>
+<main class="flex-1 flex justify-center py-8 md:py-12 px-4 md:px-10">
+<div class="flex flex-col max-w-[800px] w-full gap-8">
+<div class="flex flex-col gap-3">
+<div class="flex flex-wrap justify-between items-end gap-4">
+<div class="flex flex-col gap-2">
+<h1 class="text-[#1e293b] dark:text-white text-3xl md:text-4xl font-black leading-tight tracking-[-0.033em]">Resolution Feedback</h1>
+<p class="text-[#64748b] dark:text-[#93c5fd] text-base font-medium">Your complaint <span class="text-primary dark:text-primary font-bold">#IND-2023-8921</span> has been resolved.</p>
+</div>
+<span class="inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-bold text-primary ring-1 ring-inset ring-primary/20">
+                        RESOLVED
+                    </span>
+</div>
+</div>
+<div class="bg-white dark:bg-[#1e293b]/30 rounded-xl border border-[#dbeafe] dark:border-white/10 p-0 overflow-hidden shadow-sm">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-px bg-[#eff6ff] dark:bg-white/10 border-b border-[#dbeafe] dark:border-white/10">
+<div class="bg-white dark:bg-[#0f172a] p-4 flex flex-col gap-1">
+<span class="text-xs font-semibold uppercase tracking-wider text-[#64748b] dark:text-[#93c5fd]">Complaint ID</span>
+<span class="text-sm font-bold text-[#1e293b] dark:text-white">#IND-2023-8921</span>
+</div>
+<div class="bg-white dark:bg-[#0f172a] p-4 flex flex-col gap-1">
+<span class="text-xs font-semibold uppercase tracking-wider text-[#64748b] dark:text-[#93c5fd]">Category</span>
+<span class="text-sm font-bold text-[#1e293b] dark:text-white">Water Supply</span>
+</div>
+<div class="bg-white dark:bg-[#0f172a] p-4 flex flex-col gap-1">
+<span class="text-xs font-semibold uppercase tracking-wider text-[#64748b] dark:text-[#93c5fd]">Logged</span>
+<span class="text-sm font-bold text-[#1e293b] dark:text-white">12 Oct, 2023</span>
+</div>
+<div class="bg-white dark:bg-[#0f172a] p-4 flex flex-col gap-1">
+<span class="text-xs font-semibold uppercase tracking-wider text-[#64748b] dark:text-[#93c5fd]">Location</span>
+<span class="text-sm font-bold text-[#1e293b] dark:text-white">Andheri East</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-center gap-8 py-4">
+<div class="flex flex-col items-center gap-4 w-full">
+<p class="text-[#1e293b] dark:text-white text-lg font-bold text-center">How would you rate the quality of the resolution provided?</p>
+<div class="flex gap-2 sm:gap-4 p-2">
+<button class="group transition-transform hover:scale-110 focus:outline-none">
+<span class="material-symbols-outlined fill text-5xl text-primary drop-shadow-sm">star</span>
+</button>
+<button class="group transition-transform hover:scale-110 focus:outline-none">
+<span class="material-symbols-outlined fill text-5xl text-primary drop-shadow-sm">star</span>
+</button>
+<button class="group transition-transform hover:scale-110 focus:outline-none">
+<span class="material-symbols-outlined fill text-5xl text-primary drop-shadow-sm">star</span>
+</button>
+<button class="group transition-transform hover:scale-110 focus:outline-none">
+<span class="material-symbols-outlined fill text-5xl text-primary drop-shadow-sm">star</span>
+</button>
+<button class="group transition-transform hover:scale-110 focus:outline-none">
+<span class="material-symbols-outlined text-5xl text-[#e2e8f0] dark:text-white/20 group-hover:text-primary/50 transition-colors">star</span>
+</button>
+</div>
+<p class="text-sm font-medium text-[#3b82f6] dark:text-[#93c5fd]">Good</p>
+</div>
+<div class="w-full max-w-[600px] relative group">
+<textarea class="w-full h-32 rounded-xl bg-white dark:bg-[#1e293b] border border-[#cbd5e1] dark:border-white/10 p-4 pr-12 text-base text-[#1e293b] dark:text-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all resize-none shadow-sm" placeholder="Tell us more about your experience (Optional)..."></textarea>
+<button class="absolute right-3 bottom-3 p-2 rounded-full text-gray-400 hover:text-primary hover:bg-[#eff6ff] dark:hover:bg-[#0f172a] transition-colors" title="Use Voice Input">
+<span class="material-symbols-outlined">mic</span>
+</button>
+</div>
+<div class="flex flex-col items-center gap-4 w-full max-w-[320px]">
+<button class="w-full h-12 bg-primary hover:bg-[#1d4ed8] active:scale-95 text-white text-base font-bold rounded-lg shadow-lg shadow-primary/20 transition-all flex items-center justify-center gap-2">
+<span>Submit Feedback</span>
+<span class="material-symbols-outlined text-[20px]">send</span>
+</button>
+<a class="text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-colors underline-offset-4 hover:underline" href="#">
+                        Skip feedback
+                    </a>
+</div>
+</div>
+</div>
+</main>
+
+</body></html>

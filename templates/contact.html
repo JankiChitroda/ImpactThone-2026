@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact Support - नैत्रम् (Naitram)</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=Noto+Sans+Devanagari:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#3b82f6",
+                        secondary: "#1e40af",
+                        "background-light": "#FFFFFF",
+                        "background-dark": "#0f172a",
+                        "surface-light": "#F8FAFC",
+                        "surface-dark": "#1e293b",
+                        "india-orange": "#FF9933",
+                        "india-green": "#138808",
+                        "india-blue": "#000080",
+                    },
+                    fontFamily: {
+                        sans: ["Inter", "sans-serif"],
+                        devanagari: ["Noto Sans Devanagari", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                        'xl': "1rem",
+                        '2xl': "1.5rem",
+                    },
+                    boxShadow: {
+                        'soft-xl': '0 20px 40px -5px rgba(0, 0, 0, 0.08)',
+                        'glow': '0 0 20px rgba(59, 130, 246, 0.3)',
+                    }
+                },
+            },
+        };
+    </script>
+<style type="text/tailwindcss">
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #cbd5e1;
+            border-radius: 20px;
+        }
+        .dark ::-webkit-scrollbar-thumb {
+            background-color: #475569;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 font-sans antialiased min-h-screen flex flex-col transition-colors duration-300">
+<nav class="w-full border-b border-slate-100 dark:border-slate-800 py-4 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md sticky top-0 z-50">
+<div class="container mx-auto px-6 flex justify-between items-center">
+<div class="flex items-center space-x-3">
+<div class="w-10 h-10 rounded-full border-2 border-india-blue flex items-center justify-center relative bg-white overflow-hidden">
+<div class="absolute inset-0 opacity-10" style="background: repeating-conic-gradient(from 0deg, transparent 0deg 7deg, #000080 7deg 8deg, transparent 8deg 15deg);"></div>
+<span class="text-xs font-bold text-india-blue z-10">☸</span>
+</div>
+<div>
+<span class="text-2xl font-bold text-primary font-devanagari">नैत्रम्</span>
+<p class="text-[8px] tracking-widest text-slate-400 font-bold uppercase -mt-1">Voice of India</p>
+</div>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<div class="flex space-x-6 text-sm font-medium text-slate-600 dark:text-slate-400">
+    <a class="hover:text-primary transition-colors" href="{{ url_for('index') }}">About</a>
+</div>
+    <a class="text-primary" href="{{ url_for('services') }}">Services</a>
+<a class="text-primary" href="#">Contact</a>
+</div>
+<div class="h-5 w-px bg-slate-200 dark:bg-slate-700"></div>
+<div class="flex items-center space-x-4">
+  <a class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary transition-colors" href="{{ url_for('login') }}">Login</a>
+  <a class="px-5 py-2 text-sm font-medium text-white bg-primary rounded-full hover:bg-secondary transition-colors shadow-lg shadow-blue-500/20" href="{{ url_for('signup') }}">Sign Up</a>
+</div>
+</div>
+</div>
+</nav>
+<main class="flex-grow container mx-auto px-6 py-12 lg:py-16">
+<div class="max-w-4xl mx-auto text-center mb-16">
+<h1 class="text-3xl md:text-5xl font-extrabold text-slate-900 dark:text-white mb-4">
+            Direct <span class="text-primary">Support Contacts</span>
+</h1>
+<p class="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+            Connect directly with our dedicated support team for any assistance regarding the नैत्रम् platform.
+        </p>
+</div>
+<div class="max-w-4xl mx-auto">
+<section class="space-y-6">
+<h2 class="text-2xl font-bold mb-8 flex items-center justify-center gap-2 px-2">
+<span class="material-symbols-outlined text-primary">groups</span>
+                Meet Our Direct Support Team
+            </h2>
+<div class="grid grid-cols-1 md:grid-cols-1 gap-6">
+<div class="flex flex-col sm:flex-row items-center gap-6 bg-white dark:bg-surface-dark p-8 rounded-2xl shadow-soft-xl border border-slate-100 dark:border-slate-800 transition-all hover:shadow-glow hover:-translate-y-1">
+<div class="shrink-0 w-28 h-28 rounded-full bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center border-2 border-primary/20 overflow-hidden shadow-inner">
+<span class="material-symbols-outlined text-5xl text-primary/60">person</span>
+</div>
+<div class="flex-grow text-center sm:text-left">
+<h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-3">YASHVI CHAVDA</h3>
+<div class="flex flex-col sm:flex-row sm:gap-8 space-y-3 sm:space-y-0">
+<div class="flex items-center justify-center sm:justify-start gap-3 text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-primary text-xl">call</span>
+<span class="font-medium text-lg">+91 635519390</span>
+</div>
+<div class="flex items-center justify-center sm:justify-start gap-3 text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-primary text-xl">mail</span>
+<span class="font-medium text-lg">yashvichavda6@gmail.com</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-center gap-6 bg-white dark:bg-surface-dark p-8 rounded-2xl shadow-soft-xl border border-slate-100 dark:border-slate-800 transition-all hover:shadow-glow hover:-translate-y-1">
+<div class="shrink-0 w-28 h-28 rounded-full bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center border-2 border-primary/20 overflow-hidden shadow-inner">
+<span class="material-symbols-outlined text-5xl text-primary/60">person</span>
+</div>
+<div class="flex-grow text-center sm:text-left">
+<h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-3">PRAGATI VARU</h3>
+<div class="flex flex-col sm:flex-row sm:gap-8 space-y-3 sm:space-y-0">
+<div class="flex items-center justify-center sm:justify-start gap-3 text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-primary text-xl">call</span>
+<span class="font-medium text-lg">+91 9875122785</span>
+</div>
+<div class="flex items-center justify-center sm:justify-start gap-3 text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-primary text-xl">mail</span>
+<span class="font-medium text-lg">pragativaru23@gmail.com</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-center gap-6 bg-white dark:bg-surface-dark p-8 rounded-2xl shadow-soft-xl border border-slate-100 dark:border-slate-800 transition-all hover:shadow-glow hover:-translate-y-1">
+<div class="shrink-0 w-28 h-28 rounded-full bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center border-2 border-primary/20 overflow-hidden shadow-inner">
+<span class="material-symbols-outlined text-5xl text-primary/60">person</span>
+</div>
+<div class="flex-grow text-center sm:text-left">
+<h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-3">JANKI CHITRODA</h3>
+<div class="flex flex-col sm:flex-row sm:gap-8 space-y-3 sm:space-y-0">
+<div class="flex items-center justify-center sm:justify-start gap-3 text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-primary text-xl">call</span>
+<span class="font-medium text-lg">+91 9499676967</span>
+</div>
+<div class="flex items-center justify-center sm:justify-start gap-3 text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-primary text-xl">mail</span>
+<span class="font-medium text-lg">jankichitroda8@gmail.com</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<footer class="border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark py-10 mt-auto">
+<div class="container mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex items-center space-x-3 opacity-90 mx-auto">
+<div class="w-8 h-8 rounded-full border border-india-blue flex items-center justify-center bg-white overflow-hidden relative">
+<div class="absolute inset-0 opacity-10" style="background: repeating-conic-gradient(from 0deg, transparent 0deg 7deg, #000080 7deg 8deg, transparent 8deg 15deg);"></div>
+<span class="text-[10px] text-india-blue z-10">☸</span>
+</div>
+<div class="text-sm text-slate-600 dark:text-slate-400 text-center">
+                    © 2026 <span class="font-devanagari font-semibold">नैत्रम्</span> Portal. All rights reserved. 
+                    <span class="ml-1 font-bold tracking-tight text-xs opacity-75">A GOVERNMENT OF INDIA INITIATIVE</span>
+</div>
+</div>
+</div>
+</div>
+</footer>
+
+</body></html>

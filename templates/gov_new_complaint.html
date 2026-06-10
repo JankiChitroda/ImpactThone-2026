@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>नैत्रम् Portal - New Complaints List</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1173d4",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        body {
+            font-family: 'Public Sans', sans-serif;
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            transition: all 0.3s ease;
+        }
+        .logo-brush-orange { fill: #FF9933; }
+        .logo-brush-green { fill: #138808; }
+        .logo-chakra-blue { fill: #000080; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display flex flex-col min-h-screen">
+<header class="sticky top-0 z-50 w-full bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="max-w-[1440px] mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="flex items-center">
+<div class="relative h-12 w-12 flex items-center justify-center">
+<div class="absolute inset-0 flex items-center justify-center">
+<svg class="w-full h-full" fill="none" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+<path class="logo-brush-orange" d="M20 35C35 25 65 25 80 35" opacity="0.8" stroke="#FF9933" stroke-linecap="round" stroke-width="8"></path>
+<path class="logo-brush-green" d="M20 65C35 75 65 75 80 65" opacity="0.8" stroke="#128807" stroke-linecap="round" stroke-width="8"></path>
+<circle cx="50" cy="50" fill="white" r="18" stroke="#000080" stroke-width="1.5"></circle>
+<circle cx="50" cy="50" r="15" stroke="#000080" stroke-width="0.5"></circle>
+<g transform="translate(50, 50)">
+<line stroke="#000080" stroke-width="0.8" transform="rotate(0)" y2="-15"></line>
+<line stroke="#000080" stroke-width="0.8" transform="rotate(15)" y2="-15"></line>
+<line stroke="#000080" stroke-width="0.8" transform="rotate(30)" y2="-15"></line>
+<line stroke="#000080" stroke-width="0.8" transform="rotate(45)" y2="-15"></line>
+<line stroke="#000080" stroke-width="0.8" transform="rotate(60)" y2="-15"></line>
+<line stroke="#000080" stroke-width="0.8" transform="rotate(75)" y2="-15"></line>
+<line stroke="#000080" stroke-width="0.8" transform="rotate(90)" y2="-15"></line>
+<line stroke="#000080" stroke-width="0.8" transform="rotate(105)" y2="-15"></line>
+<line stroke="#000080" stroke-width="0.8" transform="rotate(120)" y2="-15"></line>
+<line stroke="#000080" stroke-width="0.8" transform="rotate(135)" y2="-15"></line>
+<line stroke="#000080" stroke-width="0.8" transform="rotate(150)" y2="-15"></line>
+<line stroke="#000080" stroke-width="0.8" transform="rotate(165)" y2="-15"></line>
+<line stroke="#000080" stroke-width="0.8" transform="rotate(180)" y2="-15"></line>
+<line stroke="#000080" stroke-width="0.8" transform="rotate(195)" y2="-15"></line>
+<line stroke="#000080" stroke-width="0.8" transform="rotate(210)" y2="-15"></line>
+<line stroke="#000080" stroke-width="0.8" transform="rotate(225)" y2="-15"></line>
+<line stroke="#000080" stroke-width="0.8" transform="rotate(240)" y2="-15"></line>
+<line stroke="#000080" stroke-width="0.8" transform="rotate(255)" y2="-15"></line>
+<line stroke="#000080" stroke-width="0.8" transform="rotate(270)" y2="-15"></line>
+<line stroke="#000080" stroke-width="0.8" transform="rotate(285)" y2="-15"></line>
+<line stroke="#000080" stroke-width="0.8" transform="rotate(300)" y2="-15"></line>
+<line stroke="#000080" stroke-width="0.8" transform="rotate(315)" y2="-15"></line>
+<line stroke="#000080" stroke-width="0.8" transform="rotate(330)" y2="-15"></line>
+<line stroke="#000080" stroke-width="0.8" transform="rotate(345)" y2="-15"></line>
+</g>
+</svg>
+</div>
+</div>
+<div class="ml-3">
+<h1 class="text-xl font-black text-slate-900 dark:text-white tracking-tight leading-none">नैत्रम्</h1>
+</div>
+</div>
+<div class="h-8 w-px bg-slate-200 dark:bg-slate-700 mx-2"></div>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-sm font-semibold text-primary" href="{{ url_for('gov_dashboard') }}">Dashboard</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden lg:flex flex-col items-end">
+</div>
+<div class="flex items-center gap-3">
+<button class="p-2 text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="h-10 w-10 rounded-full bg-primary/10 border-2 border-primary/20 flex items-center justify-center text-primary font-bold overflow-hidden">
+<img alt="Administrator Profile" class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1yXWhaajJpRplS3uh7lS_QeRSvZ-UcSfhxQedHYNL_ASnT1ORMT1yCQi3ECse2hH8sM5zyBnuZ7p49IPfXfDWBntCy_jkm5KHjaLuDsQf-clZlT22N6Fn2bzUJQbPhVztO2gD2tleXk91Sd9DlsEnfj8DTfybONlm1yqnjt2PZU4ye8hhUJbNGtoRgoh1uPMkhEDxDwWZYz_3ZJSJKSg0tYSK0DohAWR8-kLe15of51mnuxX0jJcBfpdhp0kV3ilaznePLfcRhLo"/>
+</div>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-1 max-w-[1440px] mx-auto w-full flex flex-col overflow-hidden">
+<section class="w-full flex flex-col bg-white dark:bg-slate-900/50 min-h-full">
+<div class="p-8 border-b border-slate-100 dark:border-slate-800 flex justify-between items-end bg-white dark:bg-slate-900">
+<div>
+<h2 class="text-3xl font-black text-slate-900 dark:text-white tracking-tight">New Complaints</h2>
+<p class="text-slate-500 dark:text-slate-400 mt-1">Review and manage incoming citizen grievances with inline quick actions.</p>
+</div>
+<div class="flex gap-4 items-center">
+<div class="flex flex-col items-end mr-4 border-r border-slate-200 dark:border-slate-700 pr-6">
+</div>
+<span class="bg-primary/10 text-primary text-xs font-bold px-4 py-2 rounded-full border border-primary/20">42 PENDING COMPLAINTS</span>
+</div>
+</div>
+<div class="flex-1 overflow-y-auto p-8 space-y-4 scrollbar-hide">
+    {% for complaint in complaints %}
+    <div class="group flex items-center p-6 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl hover:shadow-md transition-all">
+        <div class="flex-1 pr-8">
+            <div class="flex justify-between items-start mb-2">
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white">Citizen Report #{{ complaint[0] }}</h3>
+                <span class="text-xs font-medium text-slate-400">Received via Naitram AI</span>
+            </div>
+            
+            <span class="inline-block px-3 py-1 mb-2 bg-primary/10 text-primary text-[10px] font-bold rounded-full border border-primary/20 uppercase">
+                {{ complaint[2] }}
+            </span>
+
+            <p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed mb-4">
+                {{ complaint[1] }}
+            </p>
+
+            <div class="flex items-center gap-2 text-slate-500">
+                <span class="material-symbols-outlined text-lg">location_on</span>
+                <span class="text-xs font-bold uppercase tracking-wider">India</span>
+            </div>
+        </div>
+
+        <div class="flex gap-3 shrink-0">
+            <form action="{{ url_for('update_status', id=complaint[0], status='Accepted') }}" method="POST">
+                <button type="submit" class="...">
+                    <span class="material-symbols-outlined text-2xl mb-1">check_circle</span>
+                    <span class="text-xs font-black tracking-widest uppercase">Accept</span>
+                </button>
+            </form>
+            <form action="{{ url_for('update_status', id=complaint[0], status='Denied') }}" method="POST">
+                <button type="submit" class="flex flex-col items-center justify-center w-24 h-24 bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-400 hover:text-slate-600 dark:hover:text-slate-300 border border-slate-200 dark:border-slate-700 rounded-xl transition-all">
+                    <span class="material-symbols-outlined text-2xl mb-1">history_toggle_off</span>
+                    <span class="text-xs font-bold tracking-widest uppercase">Deny</span>
+                </button>
+            </form>
+        </div>
+    </div>
+    {% endfor %}
+    </div>
+<div class="group flex items-center p-6 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl hover:shadow-md transition-all">
+
+<div class="flex gap-3 shrink-0">
+<button class="flex flex-col items-center justify-center w-24 h-24 bg-white dark:bg-slate-800 hover:bg-success/10 text-slate-400 hover:text-success border border-slate-200 dark:border-slate-700 hover:border-success/50 rounded-xl transition-all">
+<span class="material-symbols-outlined text-2xl mb-1">check_circle</span>
+<span class="text-xs font-black tracking-widest uppercase">Yes</span>
+</button>
+<button class="flex flex-col items-center justify-center w-24 h-24 bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-400 hover:text-slate-600 dark:hover:text-slate-300 border border-slate-200 dark:border-slate-700 rounded-xl transition-all">
+<span class="material-symbols-outlined text-2xl mb-1">history_toggle_off</span>
+<span class="text-xs font-bold tracking-widest uppercase">Deny</span>
+</button>
+</div>
+</div>
+<div class="group flex items-center p-6 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl hover:shadow-md transition-all">
+<div class="flex-1 pr-8">
+
+
+</div>
+<div class="flex gap-3 shrink-0">
+<button class="flex flex-col items-center justify-center w-24 h-24 bg-white dark:bg-slate-800 hover:bg-success/10 text-slate-400 hover:text-success border border-slate-200 dark:border-slate-700 hover:border-success/50 rounded-xl transition-all">
+<span class="material-symbols-outlined text-2xl mb-1">check_circle</span>
+<span class="text-xs font-black tracking-widest uppercase">Yes</span>
+</button>
+<button class="flex flex-col items-center justify-center w-24 h-24 bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-400 hover:text-slate-600 dark:hover:text-slate-300 border border-slate-200 dark:border-slate-700 rounded-xl transition-all">
+<span class="material-symbols-outlined text-2xl mb-1">history_toggle_off</span>
+<span class="text-xs font-bold tracking-widest uppercase">Deny</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="w-full bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-6 px-6">
+<div class="max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-slate-500 dark:text-slate-400 text-sm">
+<div class="flex items-center gap-4">
+<div class="h-4 w-px bg-slate-200 dark:bg-slate-700"></div>
+</div>
+<div class="flex items-center gap-2">
+<div class="h-1.5 w-1.5 rounded-full bg-success"></div>
+</div>
+<div class="flex gap-6 font-medium">
+</div>
+</div>
+</footer>
+
+</body></html>

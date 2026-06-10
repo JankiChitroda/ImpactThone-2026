@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Our Services - नैत्रम् (Naitram)</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=Noto+Sans+Devanagari:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#3b82f6",
+              secondary: "#1e40af",
+              "background-light": "#FFFFFF",
+              "background-dark": "#0f172a",
+              "surface-light": "#F8FAFC",
+              "surface-dark": "#1e293b",
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              devanagari: ["Noto Sans Devanagari", "sans-serif"],
+            },
+            boxShadow: {
+              'soft-xl': '0 20px 40px -5px rgba(0, 0, 0, 0.05)',
+            }
+          },
+        },
+      };
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            .material-symbols-outlined {
+                font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            }
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #cbd5e1;
+            border-radius: 20px;
+        }
+        .dark ::-webkit-scrollbar-thumb {
+            background-color: #475569;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 font-sans antialiased min-h-screen flex flex-col transition-colors duration-300">
+<nav class="w-full border-b border-slate-100 dark:border-slate-800 py-4 sticky top-0 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md z-50">
+<div class="container mx-auto px-6 flex justify-between items-center">
+<div class="flex items-center space-x-2">
+<span class="text-2xl font-bold text-primary font-devanagari">नैत्रम्</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<div class="flex space-x-6 text-sm font-medium text-slate-600 dark:text-slate-400">
+    <a class="hover:text-primary transition-colors" href="{{ url_for('index') }}">About</a>
+</div>
+<a class="text-primary" href="#">Services</a>
+<a class="hover:text-primary transition-colors" href="{{ url_for('contact') }}">Contact</a>
+</div>
+<div class="h-5 w-px bg-slate-200 dark:bg-slate-700"></div>
+<div class="flex items-center space-x-4">
+  <a class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary transition-colors" href="{{ url_for('login') }}">Login</a>
+  <a class="px-5 py-2 text-sm font-medium text-white bg-primary rounded-full hover:bg-secondary transition-colors shadow-lg shadow-blue-500/20" href="{{ url_for('signup') }}">Sign Up</a>
+</div>
+</div>
+</div>
+</nav>
+<main class="flex-grow container mx-auto px-6 py-12 lg:py-20">
+<div class="text-center mb-16 space-y-4">
+<div class="inline-flex items-center space-x-2 bg-blue-50 dark:bg-blue-900/30 text-primary px-4 py-1.5 rounded-full text-sm font-medium">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Our Capabilities</span>
+</div>
+<h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white">Our Core Services</h1>
+<p class="text-slate-500 dark:text-slate-400 max-w-2xl mx-auto text-lg">
+                Empowering every citizen with voice and text-driven technology to bridge the gap between people and governance.
+            </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="bg-white dark:bg-surface-dark p-8 rounded-2xl shadow-soft-xl border border-slate-50 dark:border-slate-800 hover:border-primary/30 transition-all group">
+<div class="w-14 h-14 bg-blue-50 dark:bg-blue-900/20 text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">chat</span>
+</div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Voice &amp; Text Grievance Intake</h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                    Submit your grievances naturally by either speaking naturally or typing in any Indian language or regional dialect. Our system understands you exactly as you are.
+                </p>
+</div>
+<div class="bg-white dark:bg-surface-dark p-8 rounded-2xl shadow-soft-xl border border-slate-50 dark:border-slate-800 hover:border-primary/30 transition-all group">
+<div class="w-14 h-14 bg-blue-50 dark:bg-blue-900/20 text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">description</span>
+</div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">AI Structured Reporting</h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                    Automatic conversion of raw speech and text into professional, structured administrative reports ready for government action.
+                </p>
+</div>
+<div class="bg-white dark:bg-surface-dark p-8 rounded-2xl shadow-soft-xl border border-slate-50 dark:border-slate-800 hover:border-primary/30 transition-all group">
+<div class="w-14 h-14 bg-blue-50 dark:bg-blue-900/20 text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">translate</span>
+</div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Multilingual Engine</h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                    Native support for 12+ major Indian languages, ensuring inclusivity for rural and urban populations across the country.
+                </p>
+</div>
+<div class="bg-white dark:bg-surface-dark p-8 rounded-2xl shadow-soft-xl border border-slate-50 dark:border-slate-800 hover:border-primary/30 transition-all group">
+<div class="w-14 h-14 bg-blue-50 dark:bg-blue-900/20 text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">account_tree</span>
+</div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Intelligent Routing</h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                    AI-powered automated assignment to the correct government departments, drastically reducing manual processing time.
+                </p>
+</div>
+<div class="bg-white dark:bg-surface-dark p-8 rounded-2xl shadow-soft-xl border border-slate-50 dark:border-slate-800 hover:border-primary/30 transition-all group">
+<div class="w-14 h-14 bg-blue-50 dark:bg-blue-900/20 text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">emergency</span>
+</div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Emergency Prioritization</h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                    Instant flagging and escalation of life-threatening hazards like gas leaks or infrastructure failures for immediate response.
+                </p>
+</div>
+<div class="bg-white dark:bg-surface-dark p-8 rounded-2xl shadow-soft-xl border border-slate-50 dark:border-slate-800 hover:border-primary/30 transition-all group">
+<div class="w-14 h-14 bg-blue-50 dark:bg-blue-900/20 text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">monitoring</span>
+</div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Transparent Tracking</h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                    Real-time status updates on submitted complaints via voice or text, keeping you informed at every step of the resolution.
+                </p>
+</div>
+</div>
+</main>
+<footer class="border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark py-10">
+<div class="container mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-center items-center gap-6 text-sm text-slate-500 dark:text-slate-400">
+<div class="text-center flex flex-col gap-1">
+<p>© 2026 <span class="font-devanagari text-slate-700 dark:text-slate-200">नैत्रम्</span> Portal. All rights reserved.</p>
+<p class="text-xs">A Government of India Initiative for AI-Driven Governance.</p>
+</div>
+</div>
+</div>
+</footer>
+
+</body></html>
